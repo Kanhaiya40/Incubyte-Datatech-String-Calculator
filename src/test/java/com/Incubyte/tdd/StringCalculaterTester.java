@@ -8,14 +8,14 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 3. Allow the Add method to handle new lines between numbers (instead of commas).
-     *     2. the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)
-     * ——————————————————————————————-
+     * 4.Support different delimiters
+     * 1. to change a delimiter, the beginning of the string will contain a separate line that looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
+     * 2. the first line is optional. all existing scenarios should still be supported
      */
     @Test
-    public void Add_AddUpToAnyNumbers_WhenStringIsValidAndWithDelimiters() {
-        String parameter="1,2,\n3";
-        int expextedsum=6;
+    public void Add_AddUpToAnyNumbers_WhenStringIsValidAndWithCustomDelimiters() {
+        String parameter="//;\\n1;2";
+        int expextedsum=3;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
