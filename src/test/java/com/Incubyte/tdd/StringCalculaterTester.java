@@ -19,7 +19,7 @@ public class StringCalculaterTester {
     @Test
     public void Add_AddUpToTwoNumbers_WhenStringIsValid() {
         String parameter="675,254";
-        int expextedsum=27652;
+        int expextedsum=929;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
