@@ -10,15 +10,15 @@ public class StringCalculator {
 
     /**
      * Problem:
-     * 4.Support different delimiters
-     * 1. to change a delimiter, the beginning of the string will contain a separate line that looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
-     * 2. the first line is optional. all existing scenarios should still be supported
+     * 5.Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
+     * if there are multiple negatives, show all of them in the exception message.orted
      */
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
+        List<String> negetivenumbers=new ArrayList<String>();
         String delimiters=";";
         String[] parts=parameter.split("\n");
-        String[] nubmers=parts[1].split(delimiters);
+        String[] nubmers=parts[1].split(""+delimiters+"|,");
         if(nubmers.length==0)
         {
             return 0;
@@ -26,8 +26,14 @@ public class StringCalculator {
         if (nubmers.length>0) {
             for (String number : nubmers
             ) {
-                sum = sum + Integer.parseInt(number);
+                if(Integer.parseInt(number)<0)
+                {
+                    negetivenumbers.add(number);
+                }
+                else
+                    sum=sum+Integer.parseInt(number);
             }
+            throw new ArithmeticException("negetives not allwed"+negetivenumbers);
         }
         return sum;
     }

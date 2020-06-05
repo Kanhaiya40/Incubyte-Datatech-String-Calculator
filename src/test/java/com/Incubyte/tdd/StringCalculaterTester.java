@@ -8,14 +8,13 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 4.Support different delimiters
-     * 1. to change a delimiter, the beginning of the string will contain a separate line that looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
-     * 2. the first line is optional. all existing scenarios should still be supported
+     * 5.Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
+     * if there are multiple negatives, show all of them in the exception message.orted
      */
     @Test
-    public void Add_AddUpToAnyNumbers_WhenStringIsValidAndWithCustomDelimiters() {
-        String parameter="//;\n1;2";
-        int expextedsum=3;
+    public  void Add_AddUpToAnyNumbers_WhenStringIsValidWithNegetiveNumber() {
+        String parameter="//;\n1,-7;3,-4;-9,12,24,43,-24;-32,4";
+        int expextedsum=-7;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
