@@ -13,8 +13,8 @@ public class StringCalculaterTester {
      */
     @Test
     public  void Add_AddUpToAnyNumbers_WhenStringIsValidWithNegetiveNumber() {
-        String parameter="//;\n1,-7;3,-4;-9,12,24,43,-24;-32,4";
-        int expextedsum=-7;
+        String parameter="//;\n1,7;3";
+        int expextedsum=11;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
