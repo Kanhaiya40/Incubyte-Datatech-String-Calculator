@@ -14,7 +14,7 @@ public class StringCalculaterTester {
      */
     @Test
     public void Add_AddUpToAnyNumbers_WhenStringIsValidAndWithCustomDelimiters() {
-        String parameter="//;\\n1;2";
+        String parameter="//;\n1;2";
         int expextedsum=3;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();

@@ -16,7 +16,9 @@ public class StringCalculator {
      */
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
-        String[] nubmers=parameter.split(",|\n");
+        String delimiters=";";
+        String[] parts=parameter.split("\n");
+        String[] nubmers=parts[1].split(delimiters);
         if(nubmers.length==0)
         {
             return 0;
