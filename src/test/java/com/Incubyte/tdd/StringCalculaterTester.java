@@ -8,18 +8,12 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 1. Create a simple String calculator with a method signature:
-     * ———————————————
-     * int Add(string numbers)
-     * ———————————————
-     * The method can take up to two numbers, separated by commas, and will return their sum.
-     * for example “” or “1” or “1,2” as inputs.
-     * (for an empty string it will return 0)
+     * 2. Allow the Add method to handle an unknown amount of numbers
      */
     @Test
-    public void Add_AddUpToTwoNumbers_WhenStringIsValid() {
-        String parameter="675,254";
-        int expextedsum=929;
+    public void Add_AddUpToAnyNumbers_WhenStringIsValid() {
+        String parameter="6,8,9,13";
+        int expextedsum=36;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
