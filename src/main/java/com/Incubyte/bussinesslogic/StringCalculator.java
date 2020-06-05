@@ -22,18 +22,19 @@ public class StringCalculator {
      * @return
      */
     public int getSumByStringCalculator(String parameter) {
-        String[] input = parameter.split(",");
-        if (input.length == 0) {
+        int sum=0;
+        String[] nubmers=parameter.split(",");
+        if(nubmers.length==0)
+        {
             return 0;
         }
-        if (input.length == 1) {
-            if (input[0].length() == 0) {
-                return 0;
+        if (nubmers.length>0) {
+            for (String number : nubmers
+            ) {
+                sum = sum + Integer.parseInt(number);
             }
-            return Integer.parseInt(input[0]);
         }
-        return Integer.parseInt(input[0]) + Integer.parseInt(input[1]);
-
+        return sum;
     }
 
 }
