@@ -12,8 +12,8 @@ public class StringCalculaterTester {
      */
     @Test
     public  void getSumOfAnyNumberByStringCalculatorWithCustomDelimiters() {
-        String parameter="//[@@@][%%%]\n1@@@2%%%3,5;6";
-        int expextedsum=17;
+        String parameter="//[@@@][%%%]\n1@@@2%%%3,5;6,7";
+        int expextedsum=24;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act

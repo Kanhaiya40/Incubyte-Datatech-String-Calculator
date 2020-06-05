@@ -15,8 +15,8 @@ public class StringCalculator {
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
         List<String> negetivenumbers=new ArrayList<String>();
-        String delimiters="[*]";
-        String starDelimiters="[%]";
+        String delimiters="@@@";
+        String starDelimiters="%%%";
         String[] parts=parameter.split("\n");
         String[] nubmers=parts[1].split(""+starDelimiters+"|,|;|"+delimiters+"");
         if(nubmers.length==0)
