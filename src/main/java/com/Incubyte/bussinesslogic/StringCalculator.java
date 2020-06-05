@@ -10,15 +10,15 @@ public class StringCalculator {
 
     /**
      * Problem:
-     * 7. Delimiters can be of any length with the following format: “//[delimiter]\n”
-     * for example: “//[***]\n1***2***3” should return 6
+     * 8. Allow multiple delimiters like this: “//[delim1][delim2]\n”
+     * for example “//[*][%]\n1*2%3” should return 6.
      */
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
         List<String> negetivenumbers=new ArrayList<String>();
         String delimiters=";";
         String[] parts=parameter.split("\n");
-        String[] nubmers=parts[1].split(""+delimiters+"|,");
+        String nubmers[]=parts[1].split(""+delimiters+"|,");
         if(nubmers.length==0)
         {
             return 0;

@@ -8,13 +8,13 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 7. Delimiters can be of any length with the following format: “//[delimiter]\n”
-     * for example: “//[***]\n1***2***3” should return 6
+     * 8. Allow multiple delimiters like this: “//[delim1][delim2]\n”
+     * for example “//[*][%]\n1*2%3” should return 6.
      */
     @Test
     public  void getSumOfAnyNumberByStringCalculatorWithCustomDelimiters() {
-        String parameter="//[***]\n1***2***3";
-        int expextedsum=6;
+        String parameter="//[*][%]\n1*2%3";
+        int expextedsum=17;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
