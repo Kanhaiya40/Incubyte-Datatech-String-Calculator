@@ -10,20 +10,13 @@ public class StringCalculator {
 
     /**
      * Problem:
-     * 1. Create a simple String calculator with a method signature:
-     * ———————————————
-     * int Add(string numbers)
-     * ———————————————
-     * The method can take up to two numbers, separated by commas, and will return their sum.
-     * for example “” or “1” or “1,2” as inputs.
-     * (for an empty string it will return 0)
-     *
-     * @param parameter
-     * @return
+     * 3. Allow the Add method to handle new lines between numbers (instead of commas).
+     *     1. the following input is ok: “1\n2,3” (will equal 6)
+     * ——————————————————————————————-
      */
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
-        String[] nubmers=parameter.split(",");
+        String[] nubmers=parameter.split(",|\n");
         if(nubmers.length==0)
         {
             return 0;
