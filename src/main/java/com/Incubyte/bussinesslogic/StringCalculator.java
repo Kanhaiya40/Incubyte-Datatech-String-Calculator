@@ -30,7 +30,7 @@ public class StringCalculator {
                     negetivenumbers.add(number);
                 }
                 else if(Integer.parseInt(number)>1000) {
-                        throw new ArithmeticException("number is greater than 1000");
+                        continue;
 
                     }
                 else
