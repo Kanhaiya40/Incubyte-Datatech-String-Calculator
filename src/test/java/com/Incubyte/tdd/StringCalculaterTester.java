@@ -8,11 +8,14 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 2. Allow the Add method to handle an unknown amount of numbers
+     * 3. Allow the Add method to handle new lines between numbers (instead of commas).
+     *     1. the following input is ok: “1\n2,3” (will equal 6)
+     *     2. the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)
+     * ——————————————————————————————-
      */
     @Test
-    public void Add_AddUpToAnyNumbers_WhenStringIsValid() {
-        String parameter="6,8,9,13";
+    public void Add_AddUpToAnyNumbers_WhenStringIsValidAndWithDelimiters() {
+        String parameter="6,8,9\n13";
         int expextedsum=36;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
