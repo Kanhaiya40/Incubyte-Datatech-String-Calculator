@@ -10,8 +10,7 @@ public class StringCalculator {
 
     /**
      * Problem:
-     * 5.Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
-     * if there are multiple negatives, show all of them in the exception message.orted
+     * 6.Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
      */
     public int getSumByStringCalculator(String parameter) {
         int sum=0;
@@ -30,10 +29,20 @@ public class StringCalculator {
                 {
                     negetivenumbers.add(number);
                 }
+                else if(Integer.parseInt(number)>1000) {
+                        throw new ArithmeticException("number is greater than 1000");
+
+                    }
                 else
-                    sum=sum+Integer.parseInt(number);
+                {
+                    sum = sum + Integer.parseInt(number);
+                }
             }
-            throw new ArithmeticException("negetives not allwed"+negetivenumbers);
+            for (String negetive:negetivenumbers
+                 ) {
+                if (Integer.parseInt(negetive) < 0)
+                    throw new ArithmeticException("negetives not allwed" + negetivenumbers);
+            }
         }
         return sum;
     }

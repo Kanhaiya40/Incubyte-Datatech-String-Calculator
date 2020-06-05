@@ -8,13 +8,12 @@ public class StringCalculaterTester {
 
     /**
      * Problem:
-     * 5.Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
-     * if there are multiple negatives, show all of them in the exception message.orted
+     * 6.Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
      */
     @Test
-    public  void Add_AddUpToAnyNumbers_WhenStringIsValidWithNegetiveNumber() {
-        String parameter="//;\n1,7;3";
-        int expextedsum=11;
+    public  void Add_AddUpToAnyNumbers_WhenStringIsValidWithNumberLessThan1000() {
+        String parameter="//;\n1,7;3,1001,1001";
+        int expextedsum=2013;
         //Arrange
         StringCalculator stringCalculator=new StringCalculator();
         //Act
